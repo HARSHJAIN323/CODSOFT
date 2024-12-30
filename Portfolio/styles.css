@@ -1,0 +1,332 @@
+/* Global Reset and Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    flex-wrap: wrap;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+}
+
+.image-section img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #333;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #00bcd4;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 1400px) {
+    .text-section h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .image-section img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .skills-container {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .text-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-me {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .text-section h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 645px) {
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .footer-container {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 550px) {
+    .skills h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query for Screens 460px and Below */
+@media (max-width: 460px) {
+    /* Navbar Adjustments */
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    /* About Me Section */
+    .about-me {
+        flex-direction: column;
+    }
+
+    .text-section h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .image-section img {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Skills Section */
+    .skills-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skill {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .skills h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Footer Section */
+    .social-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Media Que
+
